@@ -1,0 +1,22 @@
+<html>
+  guide
+
+
+  never use --force for macos app or windows exe
+
+  because computing the grids use multiprocessing python module
+  which is not compatible with the spawn method used for macos and windows
+  when using pyinstaller (we use it to buil windows exe)
+  solution 1 : do not launch subprocesses on macos or windows
+  solution 2 : use threading ??
+  solution 3 : try with the fork method ??
+  
+  from https://docs.python.org/3/library/multiprocessing.html
+  Warning The 'spawn' and 'forkserver' start methods cannot currently be used with “frozen” executables (i.e., binaries produced by packages like PyInstaller and cx_Freeze) on Unix. The 'fork' start method does work.
+
+Depending on the platform, multiprocessing supports three ways to start a process. These start methods are:
+1) spawn
+The parent process starts a fresh Python interpreter process. The child process will only inherit those resources necessary to run the process object’s run() method. In particular, unnecessary file descriptors and handles from the parent process will not be inherited. Starting a process using this method is rather slow compared to using fork or forkserver.
+Available on Unix and Windows. The default on Windows and macOS.
+  
+</html>
