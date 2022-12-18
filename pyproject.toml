@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gaiacalcnicodol"
+version = "0.1.1"
+authors = [
+{ name="Julie Doligez", email="doligez.julie@gmail.com" }
+]
+description = "Gaia EDR3 calculator from University of Barcelona"
+readme = "README.txt"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "rtree >= 1.0.1",
+    "cherrypy >= 18.8.0",
+    "matplotlib >= 3.6.2",
+    "mpld3 >= 0.5.8",
+    "numpy >= 1.23.5",
+]
+
+[project.urls]
+"Homepage" = "http://gaia.doligez.fr"
+
+[project.scripts]
+gaiacalc = "gaiacalc.gaiacalc:mainproc"

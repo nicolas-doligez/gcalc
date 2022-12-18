@@ -1,0 +1,6 @@
+include src/gaiacalc/data/*
+include src/gaiacalc/data/DA/*
+include src/gaiacalc/data/DB/*
+include src/gaiacalc/log/*
+include src/gaiacalc/__init__.py
+
